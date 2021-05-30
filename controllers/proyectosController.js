@@ -1,7 +1,11 @@
 exports.proyectosHome = (req, res) => {
-    res.render('index');
+    res.render('index', {
+        nombrePagina: 'Proyectos'
+    });
 }
 
-exports.nosotros = (req, res) => {
-    res.render('nosotros')
+exports.formularioProyecto = (req, res) => {
+    res.render('nuevoProyecto', {
+        nombrePagina: 'Nuevo Proyecto'
+    })
 }
