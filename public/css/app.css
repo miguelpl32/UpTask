@@ -81,15 +81,15 @@ body {
     font-weight: 900;
     width: 250px;
     margin:0  auto;
-
+    
     display: flex;
     align-items: center;
     line-height: 0;
 }
 .boton span {
     font-size: 2.2rem;
-    margin-left: 20px;
-}
+    margin-left: 10px;
+}  
 
 .boton:hover {
     cursor: pointer;
@@ -178,6 +178,7 @@ body.index {
     flex: 1;
     padding: 1rem;
     overflow: scroll;
+    text-align: center;    
 }
 .contenido-principal h1,
 .contenido-principal h2 {
