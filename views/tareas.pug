@@ -1,9 +1,9 @@
 extends layout 
 
 block contenido 
-    h1.contenido-principal #{nombrePagina}
-        
-    
-    
-
-       
+    .contenido-principal 
+        h1 #{nombrePagina} - #{proyecto.nombre}
+           
+            .contenedor-acciones 
+                a(href=`/proyecto/editar/${proyecto.id}` class="boton") Editar proyecto
+                button#eliminar-proyecto(data-proyecto-url= proyecto.url type="button" class="boton eliminar") Eliminar Proyecto       

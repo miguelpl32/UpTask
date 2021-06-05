@@ -81,15 +81,15 @@ body {
     font-weight: 900;
     width: 250px;
     margin:0  auto;
-    
+    font-size: medium;
     display: flex;
     align-items: center;
     line-height: 0;
 }
 .boton span {
     font-size: 2.2rem;
-    margin-left: 10px;
-}  
+    margin-left: 20px;
+}
 
 .boton:hover {
     cursor: pointer;
@@ -178,7 +178,6 @@ body.index {
     flex: 1;
     padding: 1rem;
     overflow: scroll;
-    text-align: center;    
 }
 .contenido-principal h1,
 .contenido-principal h2 {
@@ -244,8 +243,6 @@ body.index {
     max-width: 300px;
     margin: 0 auto 1rem auto;
     text-transform: uppercase;
-    color: red!important;
-    background-color: rgb(255, 201, 201);
 }
 .error {
     color: red!important;
