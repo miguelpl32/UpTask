@@ -7,9 +7,7 @@ if(btnEliminar){
     btnEliminar.addEventListener('click', e => {
         const urlProyecto = e.target.dataset.proyectoUrl;
 
-        // console.log(urlProyecto);
-
-      
+        // console.log(urlProyecto);      
 
         Swal.fire({
             title: 'Desea borrar este proyecto?',
