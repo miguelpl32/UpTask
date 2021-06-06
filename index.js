@@ -59,18 +59,16 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-// Pasar var dump a la aplicacion
+// Pasar var dump a la aplicacion, mensajes flash e informacion del usuario
 app.use((req, res, next) => {
+    
     res.locals.vardump = helpers.vardump;
     res.locals.mensajes = req.flash();
+    res.locals.usuario = {...req.user} || null;        
     next();
 });
 
-
-
 app.use('/', routes());
-
-
 
 //Puerto express
 app.listen(3000, () => {
