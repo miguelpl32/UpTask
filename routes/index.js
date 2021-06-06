@@ -32,6 +32,12 @@ module.exports = function() {
     // Tareas 
     router.post('/proyectos/:url', tareasController.agregarTarea );
 
+    // Actualizar Tarea 
+    router.patch('/tareas/:id', tareasController.cambiarEstadoTarea);
+    
+    // Eliminar Tarea 
+    router.delete('/tareas/:id', tareasController.eliminarTarea);
+
     return router;
 }
 
