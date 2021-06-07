@@ -1,11 +1,12 @@
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
-const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const passport = require('./config/passport');
+// importar las variables
+require('dotenv').config({ path: 'variables.env'});
 
  
 // helpers con algunas funciones
@@ -72,7 +73,12 @@ app.use((req, res, next) => {
 app.use('/', routes());
 
 //Puerto express
-app.listen(3000, () => {
-console.log('APP EN EL PUERTO 3000!');
+// Servidor y Puerto
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000; 
+
+app.listen(port, host, () => {
+    console.log('El servidor esta funcionando');
 });
+
 
