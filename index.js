@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
-// const expressValidator = require('express-validator');
+const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -38,6 +38,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 // app.use(expressValidator());
+
 
 
 // Añadir carpeta de las vistas

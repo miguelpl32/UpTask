@@ -28,10 +28,7 @@ exports.formularioProyecto = async (req, res) => {
 exports.nuevoProyecto = async ( req, res) => {
 
     const usuarioId = res.locals.usuario.id;
-    const proyectos = await Proyectos.findAll({where: { usuarioId }});
-
-    // Enviar a la consola lo que el usuario escriba
-    //console.log(req.body);
+    const proyectos = await Proyectos.findAll({where: { usuarioId }});    
 
     // validar los datos del formulario
     const { nombre } = req.body;
@@ -118,10 +115,7 @@ exports.formularioEditar = async (req, res) => {
 exports.actualizarProyecto = async ( req, res) => {
 
     const usuarioId = res.locals.usuario.id;
-    const proyectos = await Proyectos.findAll({where: { usuarioId }});
-
-    // Enviar a la consola lo que el usuario escriba
-    //console.log(req.body);
+    const proyectos = await Proyectos.findAll({where: { usuarioId }});    
 
     // validar los datos del formulario
     const { nombre } = req.body;

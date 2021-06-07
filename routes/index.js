@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // importar express validator
-const { body } = require('express-validator/check');
+const { body } = require('express-validator');
 
 //importar  controladores
 const proyectosController = require('../controllers/proyectosController');
@@ -12,6 +12,7 @@ const usuariosController = require('../controllers/usuariosController');
 const authController = require('../controllers/authController');
 
 module.exports = function() {
+
     //ruta para el home 
     router.get('/', authController.usuarioAutenticado, proyectosController.proyectosHome);
     router.get('/nuevo-proyecto', authController.usuarioAutenticado, proyectosController.formularioProyecto);
@@ -43,6 +44,7 @@ module.exports = function() {
     // Crear nueva cuenta 
     router.get('/crear-cuenta', usuariosController.formCrearCuenta);
     router.post('/crear-cuenta', usuariosController.crearCuenta);
+    router.get('/confirmar/:correo', usuariosController.confirmarCuenta);
 
     // Iniciar sesion
     router.get('/iniciar-sesion', usuariosController.formIniciarSesion);
