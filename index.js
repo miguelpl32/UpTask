@@ -43,7 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Añadir carpeta de las vistas
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './views'));
 
 // agregar Flash messages
 app.use(flash());
