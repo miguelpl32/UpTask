@@ -10,7 +10,7 @@ exports.formCrearCuenta = (req, res) => {
 exports.formIniciarSesion = (req, res) => {
     const { error } = res.locals.mensajes;
     
-    res.render('IniciarSesion', {
+    res.render('/IniciarSesion', {
         nombrePagina : 'Iniciar Sesión en Uptask',
         error
     });
