@@ -23,7 +23,7 @@ exports.agregarTarea = async (req, res, next) => {
     res.redirect(`/proyectos/${req.params.url }`);
 }
 
-exports.cambiarEstadoTarea = async (req, res, next) => {
+exports.cambiarEstadoTarea = async (req, res) => {
     const { id } = req.params;
     const tarea = await Tareas.findOne({where: { id }});
 
@@ -43,7 +43,7 @@ exports.cambiarEstadoTarea = async (req, res, next) => {
     res.status(200).send('Actualizado');
 }
 
-exports.eliminarTarea = async (req, res, next) => {
+exports.eliminarTarea = async (req, res) => {
     const { id } = req.params;
 
     // Eliminar tarea 
